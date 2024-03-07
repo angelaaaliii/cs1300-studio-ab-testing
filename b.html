@@ -45,7 +45,7 @@
                             <path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7"/>
                             <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
                         </svg>
-                        <p class="current-selected-section-text">Appointments</p>
+                        <p class="current-selected-section-text">Schedule Appointments</p>
                     </span>
                     <span class="side-nav-section-row">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#868686" class="bi bi-envelope" viewBox="0 0 16 16">
@@ -129,7 +129,7 @@
             -->
 
             <div class="appointments-container">
-                <p class="appointments-container-name">Available Appointments</p>
+                <p class="appointments-container-name"><b>Available Appointments </b><i>(by date)</i></p>
                 <div class="divider"></div>
 
                 <div class="appointment-row">
@@ -140,9 +140,9 @@
                     </div>
 
                     <div class="appointment-info">
-                        <p class="appointment-title">Comprehensive Eye Exam</p>
                         <p class="appointment-text">Lionel Grey, MD</p>
-                        <p class="appointment-text">Plainsville Optometry Group</p>
+                        <p class="appointment-location">Plainsville Optometry Group</p>
+                        <p class="appointment-title">Comprehensive Eye Exam</p>
                     </div>
 
                     <div class="appointment-buttons">
@@ -159,9 +159,9 @@
                     </div>
 
                     <div class="appointment-info">
-                        <p class="appointment-title">Primary Care Visit</p>
                         <p class="appointment-text">Paula Damle, MD</p>
-                        <p class="appointment-text">Plainsville Medical Center</p>
+                        <p class="appointment-location">Plainsville Medical Center</p>
+                        <p class="appointment-title">Primary Care Visit</p>
                     </div>
 
                     <div class="appointment-buttons">
@@ -178,9 +178,75 @@
                     </div>
 
                     <div class="appointment-info">
-                        <p class="appointment-title">Physical Therapy</p>
                         <p class="appointment-text">Adam Ng, PT</p>
-                        <p class="appointment-text">Morristown Medical Center</p>
+                        <p class="appointment-location">Morristown Medical Center</p>
+                        <p class="appointment-title">Physical Therapy</p>
+                    </div>
+
+                    <div class="appointment-buttons">
+                        <input type="button" value="See Appointment" class="defunct-button" />
+                        <input type="button" value="Schedule Appointment" class="defunct-button" />
+                    </div>
+                </div>
+
+                <div class="appointment-row">
+                    <div class="appointment-date">
+                        <p class="date-text">APR</p>
+                        <p class="date-text">23</p>
+                        <p class="date-text">2024</p>
+                    </div>
+
+                    <div class="appointment-info">
+                        <p class="appointment-text">Adam Ng, MD</p>
+                        <p class="appointment-location">Morristown Medical Center</p>
+                        <p class="appointment-title">Primary Care Visit</p>
+                    </div>
+
+                    <dialog class="success-dialog">
+                        <p class="dialog-text">You've successfully scheduled:</p>
+                        <div class="appointment-info">
+                            <p class="appointment-text">Adam Ng, MD</p>
+                            <p class="appointment-location">Morristown Medical Center</p>
+                            <p class="appointment-title">Primary Care Visit</p>
+                        </div>
+                        <button autofocus onclick="suc(event)" class="dialog-button">OK</button>
+                    </dialog>
+                    <div class="appointment-buttons">
+                        <input type="button" onclick="fail(event)" value="See Appointment" class="defunct-button" />
+                        <input type="button" value="Schedule Appointment" class="working-button" id="working-button" />
+                    </div>
+                </div>
+
+                <div class="appointment-row">
+                    <div class="appointment-date">
+                        <p class="date-text">APR</p>
+                        <p class="date-text">23</p>
+                        <p class="date-text">2024</p>
+                    </div>
+
+                    <div class="appointment-info">
+                        <p class="appointment-text">Adam Ng, MD</p>
+                        <p class="appointment-location">Hazeltown Medical Center</p>
+                        <p class="appointment-title">Primary Care Visit</p>
+                    </div>
+
+                    <div class="appointment-buttons">
+                        <input type="button" onclick="fail(event)" value="See Appointment" class="defunct-button" />
+                        <input type="button" onclick="fail(event)" value="Schedule Appointment" class="defunct-button" />
+                    </div>
+                </div>
+
+                <div class="appointment-row">
+                    <div class="appointment-date">
+                        <p class="date-text">APR</p>
+                        <p class="date-text">24</p>
+                        <p class="date-text">2024</p>
+                    </div>
+
+                    <div class="appointment-info">
+                        <p class="appointment-text">Paula Damle, MD</p>
+                        <p class="appointment-location">Morristown Medical Center</p>
+                        <p class="appointment-title">Primary Care Visit</p>
                     </div>
 
                     <div class="appointment-buttons">
@@ -197,9 +263,9 @@
                     </div>
 
                     <div class="appointment-info">
-                        <p class="appointment-title">Primary Care Visit</p>
                         <p class="appointment-text">Jodie Foster, MD</p>
-                        <p class="appointment-text">Morristown Medical Center</p>
+                        <p class="appointment-location">Morristown Medical Center</p>
+                        <p class="appointment-title">Primary Care Visit</p>
                     </div>
 
                     <div class="appointment-buttons">
@@ -208,71 +274,6 @@
                     </div>
                 </div>
 
-                <div class="appointment-row">
-                    <div class="appointment-date">
-                        <p class="date-text">APR</p>
-                        <p class="date-text">23</p>
-                        <p class="date-text">2024</p>
-                    </div>
-
-                    <div class="appointment-info">
-                        <p class="appointment-title">Primary Care Visit</p>
-                        <p class="appointment-text">Adam Ng, MD</p>
-                        <p class="appointment-text">Hazeltown Medical Center</p>
-                    </div>
-
-                    <div class="appointment-buttons">
-                        <input type="button" onclick="fail(event)" value="See Appointment" class="defunct-button" />
-                        <input type="button" onclick="fail(event)" value="Schedule Appointment" class="defunct-button" />
-                    </div>
-                </div>
-
-                <div class="appointment-row">
-                    <div class="appointment-date">
-                        <p class="date-text">APR</p>
-                        <p class="date-text">23</p>
-                        <p class="date-text">2024</p>
-                    </div>
-
-                    <div class="appointment-info">
-                        <p class="appointment-title">Primary Care Visit</p>
-                        <p class="appointment-text">Adam Ng, MD</p>
-                        <p class="appointment-text">Morristown Medical Center</p>
-                    </div>
-
-                    <dialog class="success-dialog">
-                        <p class="dialog-text">You've successfully scheduled:</p>
-                        <div class="appointment-info">
-                            <p class="appointment-title">Primary Care Visit</p>
-                            <p class="appointment-text">Adam Ng, MD</p>
-                            <p class="appointment-text">Morristown Medical Center</p>
-                        </div>
-                        <button autofocus onclick="suc(event)" class="dialog-button">OK</button>
-                    </dialog>
-                    <div class="appointment-buttons">
-                        <input type="button" onclick="fail(event)" value="See Appointment" class="defunct-button" />
-                        <input type="button" value="Schedule Appointment" class="working-button" id="working-button" />
-                    </div>
-                </div>
-
-                <div class="appointment-row">
-                    <div class="appointment-date">
-                        <p class="date-text">APR</p>
-                        <p class="date-text">24</p>
-                        <p class="date-text">2024</p>
-                    </div>
-
-                    <div class="appointment-info">
-                        <p class="appointment-title">Primary Care Visit</p>
-                        <p class="appointment-text">Paula Damle, MD</p>
-                        <p class="appointment-text">Morristown Medical Center</p>
-                    </div>
-
-                    <div class="appointment-buttons">
-                        <input type="button" value="See Appointment" class="defunct-button" />
-                        <input type="button" value="Schedule Appointment" class="defunct-button" />
-                    </div>
-                </div>
             </div>
         </div>
     </div>
